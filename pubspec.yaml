@@ -1,0 +1,25 @@
+name: my_build_test
+description: A sample command-line application.
+version: 1.0.0
+publish_to: none
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+# dependencies:
+#   path: ^1.8.0
+dependencies:
+  source_gen: ^1.2.6
+  build: ^2.3.1
+  kor_annotation:
+    path: ../kor_annotation/
+
+
+dev_dependencies:
+  build_runner: ^2.3.0
+  kor_generators:
+    path: ../kor_generators/
+  lints: ^2.0.0
+  test: ^1.21.6
+
