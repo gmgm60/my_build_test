@@ -71,19 +71,21 @@ class _$__ProfileModel implements _ProfileModel {
     required this.age,
     required this.codes,
   });
+  Function(dynamic, dynamic) unOrdDeepEq =
+      const DeepCollectionEquality.unordered().equals;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is _ProfileModel &&
           runtimeType == other.runtimeType &&
-          name == other.name &&
-          name1 == other.name1 &&
-          name2 == other.name2 &&
-          name3 == other.name3 &&
-          name4 == other.name4 &&
-          age == other.age &&
-          codes == other.codes;
+          unOrdDeepEq(name, other.name) &&
+          unOrdDeepEq(name1, other.name1) &&
+          unOrdDeepEq(name2, other.name2) &&
+          unOrdDeepEq(name3, other.name3) &&
+          unOrdDeepEq(name4, other.name4) &&
+          unOrdDeepEq(age, other.age) &&
+          unOrdDeepEq(codes, other.codes);
 
   @override
   int get hashCode =>

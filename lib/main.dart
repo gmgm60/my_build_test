@@ -5,8 +5,8 @@ void main() {
     name: "name",
     name1: "name1",
     name2: "name2",
-    name3: "name3",
-    name4: "name4",
+    name3: {"gngn":"name4","gmgm":[{"gngn":"name4","gmgm":[]}]},
+    name4: ["name4"],
     age: 13,
     codes: true,
   );
@@ -14,12 +14,11 @@ void main() {
     name: "name",
     name1: "name1",
     name2: "name2",
-    name3: "name3",
-    name4: "name4",
+    name3: {"gngn":"name4","gmgm":[{"gngn":"name4","gmgm":[]}]},
+    name4: ["name4"],
     age: 13,
     codes: true,
   );
 
-  model;
   print("model : ${model.toString()} ${model == model2}");
 }

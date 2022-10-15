@@ -9,8 +9,8 @@ class ProfileModel2 with _$ProfileModel2 {
     required String name,
     required String name1,
     required String name2,
-    required String name3,
-    required String name4,
+    required Map<String,dynamic> name3,
+    required List<String> name4,
     required int age,
     required bool codes,
   }) = _Profile;

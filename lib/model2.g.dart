@@ -34,8 +34,8 @@ abstract class _Profile implements ProfileModel2 {
   String get name => throw UnimplementedError();
   String get name1 => throw UnimplementedError();
   String get name2 => throw UnimplementedError();
-  String get name3 => throw UnimplementedError();
-  String get name4 => throw UnimplementedError();
+  Map<String, dynamic> get name3 => throw UnimplementedError();
+  List<String> get name4 => throw UnimplementedError();
   int get age => throw UnimplementedError();
   bool get codes => throw UnimplementedError();
 
@@ -43,8 +43,8 @@ abstract class _Profile implements ProfileModel2 {
     required String name,
     required String name1,
     required String name2,
-    required String name3,
-    required String name4,
+    required Map<String, dynamic> name3,
+    required List<String> name4,
     required int age,
     required bool codes,
   }) = _$__Profile;
@@ -58,9 +58,9 @@ class _$__Profile implements _Profile {
   @override
   String name2;
   @override
-  String name3;
+  Map<String, dynamic> name3;
   @override
-  String name4;
+  List<String> name4;
   @override
   int age;
   @override
@@ -74,19 +74,21 @@ class _$__Profile implements _Profile {
     required this.age,
     required this.codes,
   });
+  Function(dynamic, dynamic) unOrdDeepEq =
+      const DeepCollectionEquality.unordered().equals;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is _Profile &&
           runtimeType == other.runtimeType &&
-          name == other.name &&
-          name1 == other.name1 &&
-          name2 == other.name2 &&
-          name3 == other.name3 &&
-          name4 == other.name4 &&
-          age == other.age &&
-          codes == other.codes;
+          unOrdDeepEq(name, other.name) &&
+          unOrdDeepEq(name1, other.name1) &&
+          unOrdDeepEq(name2, other.name2) &&
+          unOrdDeepEq(name3, other.name3) &&
+          unOrdDeepEq(name4, other.name4) &&
+          unOrdDeepEq(age, other.age) &&
+          unOrdDeepEq(codes, other.codes);
 
   @override
   int get hashCode =>
@@ -148,19 +150,21 @@ class _$_ProfileM implements ProfileM {
     required this.age,
     required this.codes,
   });
+  Function(dynamic, dynamic) unOrdDeepEq =
+      const DeepCollectionEquality.unordered().equals;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is ProfileM &&
           runtimeType == other.runtimeType &&
-          name == other.name &&
-          name1 == other.name1 &&
-          name2 == other.name2 &&
-          name3 == other.name3 &&
-          name4 == other.name4 &&
-          age == other.age &&
-          codes == other.codes;
+          unOrdDeepEq(name, other.name) &&
+          unOrdDeepEq(name1, other.name1) &&
+          unOrdDeepEq(name2, other.name2) &&
+          unOrdDeepEq(name3, other.name3) &&
+          unOrdDeepEq(name4, other.name4) &&
+          unOrdDeepEq(age, other.age) &&
+          unOrdDeepEq(codes, other.codes);
 
   @override
   int get hashCode =>
